@@ -1,7 +1,9 @@
 // ===== Configuração da data de liberação =====
 //const releaseDate = new Date("November 25, 2025 00:00:00").getTime();
 // Teste rápido:
-const releaseDate = new Date(new Date().getTime() + 4000).getTime();
+//const releaseDate = new Date(new Date().getTime() + 4000).getTime();
+const releaseDate = new Date(2025, 10, 25, 0, 0, 0).getTime();
+
 
 // ===== Seleção dos elementos =====
 const daysEl = document.getElementById('days');
@@ -133,7 +135,7 @@ function typeMessage(elementId, text) {
                 clearInterval(interval);
                 resolve();
             }
-        }, 2);
+        }, 80);
     });
 }
 
