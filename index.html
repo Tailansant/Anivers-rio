@@ -1,0 +1,136 @@
+<!--
+emilly_birthday_v1.html
+Versão 1: esqueleto do site de aniversário
+
+
+Observações técnicas:
+- O conteúdo fica bloqueado até 00:00 do dia 25/11/2025 (hora local do usuário).
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Emilly Baqueiro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="csc/style.css">
+</head>
+
+<body>
+
+<div class="wrap">
+
+    <!-- TELA DE BLOQUEIO -->
+    <div id="lock">
+
+        <!-- TÍTULO COM ÍCONE -->
+        <div class="title-wrapper">
+            <h1>Para Você, Emilly!</h1>
+            <img src="assets/icons/flor-de-lotus.png" alt="flor" class="title-icon">
+        </div>
+
+        <div class="content-wrapper">
+            <div class="text-box">
+                <h2>Emilly Baqueiro,</h2>
+                <p>Algo especial para você, que é a garota mais especial para todos será liberado aqui em breve, mas tudo foi feito à mão então não espere muito!!</p>
+            </div>
+
+            <div class="countdown-section">
+                <div class="countdown-wrapper">
+                    <div id="countdown" class="countdown">
+                        <div class="box"><span class="num" id="days">00</span><span class="small">Dias</span></div>
+                        <div class="box"><span class="num" id="hours">00</span><span class="small">Horas</span></div>
+                        <div class="box"><span class="num" id="minutes">00</span><span class="small">Min</span></div>
+                        <div class="box"><span class="num" id="seconds">00</span><span class="small">Seg</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="open-btn" id="openBtn" disabled>(aguardando...)</button>
+    </div>
+
+    <!-- CONTEÚDO LIBERADO -->
+    <div class="content" id="content" aria-hidden="true" style="display: none;">
+
+
+        <!-- Cabeçalho: ícone + título -->
+        <div class="header-section" style="display:flex; align-items:center; gap:14px; margin-bottom: 20px;">
+            <div style="width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,#fde8f4,#fbeef8);display:flex;align-items:center;justify-content:center;font-size:26px">
+                💌
+            </div>
+            <h1 style="margin: 0;">Feliz aniversário!!💖</h1>
+        </div>
+
+
+        <div class="photos" style="margin-top:18px">
+            <div class="photo"><img src="assets/images/photo1.jpg" alt="Foto 1"></div>
+            <div class="photo"><img src="assets/images/photo2.jpg" alt="Foto 2"></div>
+            <div class="photo"><img src="assets/images/photo3.jpg" alt="Foto 3"></div>
+            <div class="photo"><img src="assets/images/photo4.jpg" alt="Foto 4"></div>
+            <div class="photo"><img src="assets/images/photo5.jpg" alt="Foto 5"></div>
+        </div>
+
+        <!-- Mensagem digitada abaixo das fotos -->
+
+        <div class="typing" id="typing">...</div>
+
+        <div class="photos-test" style="margin-top:18px">
+            <div class="photo-test"><img src="assets/images/photo15.jpg" alt="Foto 15"></div>
+            <div class="photo-test"><img src="assets/images/photo22.jpg" alt="Foto 22"></div>
+
+        </div>
+        <div class="typing" id="typing2">...</div>
+
+
+        <div class="photos-test" style="margin-top:18px">
+            <div class="photo-test"><img src="assets/images/photo16.jpg" alt="Foto 10"></div>
+            <div class="photo-test"><img src="assets/images/photo10.jpg" alt="Foto 10"></div>
+        </div>
+
+
+        <div class="typing" id="typing3">...</div>
+
+
+        <div class="photos-test" style="margin-top:18px">
+            <div class="photo-test"><img src="assets/images/photo12.jpg" alt="Foto 10"></div>
+            <div class="photo-test"><img src="assets/images/photo8.jpg" alt="Foto 8"></div>
+            <div class="photo-test"><img src="assets/images/photo17.jpg" alt="Foto 17"></div>
+
+        </div>
+
+        <div class="typing" id="typing4">...</div>
+
+
+        <div class="photos-test" style="margin-top:18px">
+            <div class="photo-test"><img src="assets/images/photo18.jpg" alt="Foto 18"></div>
+            <div class="photo-test"><img src="assets/images/photo19.jpg" alt="Foto 19"></div>
+            <div class="photo-test"><img src="assets/images/photo20.jpg" alt="Foto 20"></div>
+            <div class="photo-test"><img src="assets/images/emilly.jpg" alt="Foto 20"></div>
+        </div>
+        <div class="photos-test" style="margin-top:18px">
+            <div class="photo-test"><img src="assets/images/photo9.jpg" alt="Foto 9"></div>
+            <div class="photo-test"><img src="assets/images/photo13.jpg" alt="Foto 13"></div>
+            <div class="photo-test"><img src="assets/images/photo11.jpg" alt="Foto 11"></div>
+            <div class="photo-test"><img src="assets/images/photo7.jpg" alt="Foto 7"></div>
+        </div>
+
+        <div class="typing" id="typing6">
+            ...
+        </div>
+
+        <div class="controls">
+            <button id="surpriseFlower" class="surprise">
+                Deseja mais uma surpresa? Clique aqui!
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

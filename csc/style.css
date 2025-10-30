@@ -1,0 +1,279 @@
+/* ===== Fontes elegantes e suaves ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@500;700&display=swap');
+
+/* ===== Estilo global ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #b38bfa, #d9b89c);
+    color: #fff;
+    overflow-x: hidden;
+    transition: background 1s ease;
+    padding: 20px;
+}
+
+/* ===== Container central ===== */
+.container {
+    text-align: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* ===== Título ===== */
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* ===== TÍTULO COM ÍCONE / FLOR ===== */
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.title-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* ===== Texto suave ===== */
+.lead {
+    animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========================================================= */
+/* ===== NOVA SEÇÃO: TEXTO À ESQUERDA + CRONÔMETRO À DIREITA ===== */
+/* ========================================================= */
+
+/* ===== Estrutura principal ===== */
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 60px auto;
+    max-width: 1000px;
+    flex-wrap: wrap;
+}
+
+/* ===== Caixa de texto ===== */
+.text-box {
+    flex: 1;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: left;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.text-box h2 {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px #fff; }
+    to { text-shadow: 0 0 20px #ffb6f9, 0 0 30px #ffb6f9; }
+}
+
+/* ===== Cronômetro + Imagem lado a lado ===== */
+.countdown-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.countdown-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* ===== Cronômetro ===== */
+.countdown {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    min-width: 200px; /* ou algo proporcional */
+}
+
+.countdown .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255,255,255,0.1);
+    padding: 15px 20px;
+    border-radius: 12px;
+    min-width: 70px;
+}
+
+.countdown .num {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.countdown .small {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .countdown-wrapper {
+        flex-direction: column;
+    }
+
+    .emilly-photo {
+        width: 130px;
+        height: 130px;
+    }
+
+    .text-box {
+        text-align: center;
+        animation: none;
+    }
+}
+
+
+/* ===== CONTEÚDO LIBERADO ===== */
+#content {
+    display: none;
+    margin-top: 40px; /* controla o espaço da seção inteira */
+    text-align: center;
+}
+
+
+/* Faz o título ficar um pouco mais para cima */
+#content h1 {
+    margin-top: 30px;   /* sobe o título */
+    margin-bottom: 40px; /* espaço entre título e fotos */
+}
+
+
+/* Galeria de fotos */
+.photos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 70px; /* MAIS espaço abaixo das fotos */
+}
+
+.photo img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+
+/* ===== MENSAGEM APÓS AS FOTOS ===== */
+.typing {
+    font-size: 1rem;
+    color: #fff;
+    white-space: pre-line;
+    word-break: break-word;
+    max-width: 600px;
+    min-height: 1.5em; /* garante que o layout não quebre */
+    margin: 20px auto;
+}
+
+.typing {
+    max-width: 600px; /* ou 100% do container */
+}
+
+.photos-test {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 20px; /* MAIS espaço abaixo das fotos */
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.photo-test img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    margin: 20px auto; /* opcional: centraliza abaixo do texto */
+    display: block;    /* necessário para centralizar */
+}
+
+
+
+/* Quando aparecer */
+.photos-test.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Efeito de digitação */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Cursor piscando */
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+
+#surpriseFlower {
+    margin: 2rem auto;
+}
+
+#surpriseFlower {
+    background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    padding: 14px 36px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.4);
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+    display: none;
+    opacity: 0;
+}
+
+#surpriseFlower:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.5);
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+
+}
